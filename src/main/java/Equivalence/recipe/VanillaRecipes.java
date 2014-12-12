@@ -6,6 +6,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+import Equivalence.util.CraftingHelper;
 
 import com.pahimar.ee3.init.ModItems;
 
@@ -36,7 +37,7 @@ public class VanillaRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_ingot,4), miniumStoneStack, Items.ender_pearl);
 		
 		//Wood To Obsidian
-		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.obsidian), miniumStoneStack, Blocks.log, Blocks.log);
+		CraftingHelper.addShapedOreRecipe(new ItemStack(Blocks.obsidian), miniumStoneStack, "logWood", "logWood");
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.log,2), miniumStoneStack, Blocks.obsidian);
 		
 		//Dirt To Cobble To Sand To Dirt
