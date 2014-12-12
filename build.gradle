@@ -36,15 +36,11 @@ dependencies {
         f.mkdir()
     }
 	println("  Downloading dependencies!")
-	grabDep('gbt', 'https://dl.dropboxusercontent.com/u/47135879/Thaumcraft-1.7.10-4.2.0.1.jar')
-    grabDep('gbb', 'https://dl.dropbox.com/s/0xtjcs9nxxs9znb/Blood%20Magic-v1.1.0(1.7.10).jar')
-    grabDep('gbd', 'http://vazkii.us/mod/Botania/files/Botania%20r1.2-120.jar')
+    grabDep('gbd', 'http://ee3.pahimar.com/all/latest/EquivalentExchange3-1.7.10-0.2.371.jar')
     
 
 
 	println("  Adding dependencies!")
-     compile files("dep/gbt.jar")
-	 compile files("dep/gbb.jar")
 	 compile files("dep/gbd.jar")
 	println("  Finished adding dependencies!")
 }
@@ -56,9 +52,7 @@ minecraft {
 
 dependencies {
 	compile files (
-		'Thaumcraft.jar',
-		'Blood.jar',
-		'Botania.jar'
+		'EquivalentExchange3.jar'
 	)
 }
 
