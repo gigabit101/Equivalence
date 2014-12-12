@@ -1,3 +1,4 @@
+[![Build Status](https://drone.io/github.com/gigabit101/Equivalence/status.png)](https://drone.io/github.com/gigabit101/Equivalence/latest)
 =========
 
 The offical repository of Equivalence.
