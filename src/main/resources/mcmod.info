@@ -1,0 +1,21 @@
+[
+{
+  "modid": "Equivalence",
+  "name": "Equivalence",
+  "description": "Add Basic Recipes to the PhiloStone from EE3",
+  "version": "1.0.0",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "Gigabit101"
+    
+  ],
+  "credits": "Pahimar for making ee3",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
