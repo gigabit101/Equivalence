@@ -2,6 +2,7 @@ package Equivalence;
 
 import Equivalence.lib.ModInfo;
 import Equivalence.recipe.VanillaRecipes;
+import Equivalence.util.CompatHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -29,6 +30,8 @@ public class Equivalence
 	{
 		//Loads Vanilla Transmutation Recipes
 		VanillaRecipes.init();
+		//Loads Mod Compat
+		CompatHelper.init();
 	}
 	
 	@Mod.EventHandler
