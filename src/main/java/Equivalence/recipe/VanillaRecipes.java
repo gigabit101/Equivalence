@@ -6,6 +6,8 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
+import Equivalence.config.ConfigEquivalence;
 import Equivalence.util.CraftingHelper;
 
 import com.pahimar.ee3.init.ModItems;
@@ -20,32 +22,41 @@ public class VanillaRecipes
 {
     private static ItemStack miniumStoneStack = new ItemStack(ModItems.stoneMinium, 1, OreDictionary.WILDCARD_VALUE);
 
-    public static Item miniumStone = ModItems.stoneMinium;
+    private static Item miniumStone = ModItems.stoneMinium;
     
-	public static void init()
+    private static ItemStack anyWood = new ItemStack(Blocks.log, 1, OreDictionary.WILDCARD_VALUE);
+
+    
+	public static void init(ConfigEquivalence properties)
 	{
 		//Gold To Diamond and Diamond to Gold
+		if (properties.Gold2Diamand){
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond), miniumStoneStack, Items.gold_ingot, Items.gold_ingot, Items.gold_ingot, Items.gold_ingot);
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.gold_ingot,4), miniumStoneStack, Items.diamond);
-		
+		}
 		//Iron To Gold and Gold To Iron
+		if (properties.Iron2Gold){
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.gold_ingot), miniumStoneStack, Items.iron_ingot, Items.iron_ingot, Items.iron_ingot, Items.iron_ingot, Items.iron_ingot, Items.iron_ingot, Items.iron_ingot, Items.iron_ingot);
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_ingot,8), miniumStoneStack, Items.gold_ingot);
-		
+		}
 		//Iron To Ender Perl and Back
+		if (properties.Iron2EnderPerl){
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.ender_pearl), miniumStoneStack, Items.iron_ingot, Items.iron_ingot, Items.iron_ingot, Items.iron_ingot);
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_ingot,4), miniumStoneStack, Items.ender_pearl);
-		
+		}
 		//Wood To Obsidian
-		CraftingHelper.addShapedOreRecipe(new ItemStack(Blocks.obsidian), miniumStoneStack, "logWood", "logWood");
+		if (properties.Wood2Obsidian){
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.obsidian), miniumStoneStack, anyWood, anyWood);
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.log,2), miniumStoneStack, Blocks.obsidian);
-		
+		}
 		//Dirt To Cobble To Sand To Dirt
+		if (properties.Dirt2Cobble2Sand){
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.cobblestone), miniumStoneStack, Blocks.dirt);
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.sand), miniumStoneStack, Blocks.cobblestone);
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.dirt), miniumStoneStack, Blocks.sand);
-		
+		}
 		//Dyes
+		if (properties.Dyes2Dyes){
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye,1,0), miniumStoneStack, new ItemStack(Items.dye,1,15));
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye,1,1), miniumStoneStack, new ItemStack(Items.dye,1,0));
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye,1,2), miniumStoneStack, new ItemStack(Items.dye,1,1));
@@ -62,15 +73,15 @@ public class VanillaRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye,1,13), miniumStoneStack, new ItemStack(Items.dye,1,12));
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye,1,14), miniumStoneStack, new ItemStack(Items.dye,1,13));
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.dye,1,15), miniumStoneStack, new ItemStack(Items.dye,1,14));
-		
+		}
 		//Fish
+		if (properties.Fish2Fish){
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.fish,1,1), miniumStone, new ItemStack(Items.fish,1,0));
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.fish,1,2), miniumStone, new ItemStack(Items.fish,1,1));
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.fish,1,3), miniumStone, new ItemStack(Items.fish,1,2));
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.fish,1,0), miniumStone, new ItemStack(Items.fish,1,3));
+		}
 
-
-		
 		miniumStone.setContainerItem(miniumStone);
 	}
 
