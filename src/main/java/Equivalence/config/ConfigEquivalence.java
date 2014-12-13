@@ -88,6 +88,15 @@ public class ConfigEquivalence
 		ClayBlock2Clay = config.get(CATEGORY_RECIPES,
 				"Add ClayBlock2Clay Transmutation Recipe", true,
 				"Add or Remove ClayBlock2Clay Transmutation Recipe").getBoolean(true);
+		Cobble2Flint = config.get(CATEGORY_RECIPES,
+				"Add Cobble2Flint Transmutation Recipe", true,
+				"Add or Remove Cobble2Flint Transmutation Recipe").getBoolean(true);
+		GoldBlock2DiamandBlock = config.get(CATEGORY_RECIPES,
+				"Add GoldBlock2DiamandBlock Transmutation Recipe", true,
+				"Add or Remove GoldBlock2DiamandBlock Transmutation Recipe").getBoolean(true);
+		Ironblock2GoldBlock = config.get(CATEGORY_RECIPES,
+				"Add Ironblock2GoldBlock Transmutation Recipe", true,
+				"Add or Remove Ironblock2GoldBlock Transmutation Recipe").getBoolean(true);
 
 		
 		

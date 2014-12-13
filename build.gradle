@@ -36,12 +36,12 @@ dependencies {
         f.mkdir()
     }
 	println("  Downloading dependencies!")
-    grabDep('gbd', 'http://ee3.pahimar.com/all/latest/EquivalentExchange3-1.7.10-0.2.371.jar')
+    grabDep('EquivalentExchange3', 'http://ee3.pahimar.com/1.7.10/EquivalentExchange3-1.7.10-0.2.372.jar')
     
 
 
 	println("  Adding dependencies!")
-	 compile files("dep/gbd.jar")
+	 compile files("dep/EquivalentExchange3.jar")
 	println("  Finished adding dependencies!")
 }
 

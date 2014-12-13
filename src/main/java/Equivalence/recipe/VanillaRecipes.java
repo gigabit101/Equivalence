@@ -1,14 +1,11 @@
 package Equivalence.recipe;
 
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
-import net.minecraftforge.oredict.ShapelessOreRecipe;
 import Equivalence.config.ConfigEquivalence;
-import Equivalence.util.CraftingHelper;
 
 import com.pahimar.ee3.init.ModItems;
 
