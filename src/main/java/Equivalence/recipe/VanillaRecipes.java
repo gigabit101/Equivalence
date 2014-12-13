@@ -29,10 +29,20 @@ public class VanillaRecipes
     
 	public static void init(ConfigEquivalence properties)
 	{
+		//GoldBlock To DiamondBlock and Back
+		if (properties.GoldBlock2DiamandBlock){
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.diamond_block), miniumStoneStack, Blocks.gold_block, Blocks.gold_block, Blocks.gold_block, Blocks.gold_block);
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.gold_block,4), miniumStoneStack, Blocks.diamond_block);
+		}
 		//Gold To Diamond and Diamond to Gold
 		if (properties.Gold2Diamand){
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond), miniumStoneStack, Items.gold_ingot, Items.gold_ingot, Items.gold_ingot, Items.gold_ingot);
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.gold_ingot,4), miniumStoneStack, Items.diamond);
+		}
+		//IronBlock To GoldBlock and Back
+		if (properties.Ironblock2GoldBlock){
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.gold_block), miniumStoneStack, Blocks.iron_block, Blocks.iron_block, Blocks.iron_block, Blocks.iron_block, Blocks.iron_block, Blocks.iron_block, Blocks.iron_block, Blocks.iron_block);
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_ingot,8), miniumStoneStack, Items.gold_ingot);
 		}
 		//Iron To Gold and Gold To Iron
 		if (properties.Iron2Gold){
@@ -48,6 +58,23 @@ public class VanillaRecipes
 		if (properties.Wood2Obsidian){
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.obsidian), miniumStoneStack, anyWood, anyWood);
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.log,2), miniumStoneStack, Blocks.obsidian);
+		}
+		//Cobble To Flint
+		if (properties.Cobble2Flint){
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.flint), miniumStoneStack, Blocks.cobblestone, Blocks.cobblestone, Blocks.cobblestone, Blocks.cobblestone);
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.cobblestone,4), miniumStoneStack, Items.flint);
+		}
+		//Sticks To Planks
+		if (properties.Stick2Plank){
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks), miniumStone, Items.stick, Items.stick);
+		}
+		//Clay Block To Clay
+		if (properties.ClayBlock2Clay){
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.clay_ball,4), miniumStone, Blocks.clay);
+		}
+		//SandStone 2 Sand
+		if (properties.SandStone2Sand){
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.sand,4), miniumStone, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand);
 		}
 		//Dirt To Cobble To Sand To Dirt
 		if (properties.Dirt2Cobble2Sand){

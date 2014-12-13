@@ -18,6 +18,14 @@ public class ConfigEquivalence
 	public static boolean Dirt2Cobble2Sand;
 	public static boolean Dyes2Dyes;
 	public static boolean Fish2Fish;
+	public static boolean Cobble2Flint;
+	public static boolean Stick2Plank;
+	public static boolean SandStone2Sand;
+	public static boolean ClayBlock2Clay;
+	public static boolean Ironblock2GoldBlock;
+	public static boolean GoldBlock2DiamandBlock;
+
+
 
 	public static Configuration config;
 
@@ -68,6 +76,18 @@ public class ConfigEquivalence
 		Dyes2Dyes = config.get(CATEGORY_RECIPES,
 				"Add Dyes2Dyes Transmutation Recipe", true,
 				"Add or Remove Dyes2Dyes Transmutation Recipe").getBoolean(true);
+		Cobble2Flint = config.get(CATEGORY_RECIPES,
+				"Add Cobble2Flint Transmutation Recipe", true,
+				"Add or Remove Cobble2Flint Transmutation Recipe").getBoolean(true);
+		Stick2Plank = config.get(CATEGORY_RECIPES,
+				"Add Stick2Plank Transmutation Recipe", true,
+				"Add or Remove Stick2Plank Transmutation Recipe").getBoolean(true);
+		SandStone2Sand = config.get(CATEGORY_RECIPES,
+				"Add SandStone2Sand Transmutation Recipe", true,
+				"Add or Remove SandStone2Sand Transmutation Recipe").getBoolean(true);
+		ClayBlock2Clay = config.get(CATEGORY_RECIPES,
+				"Add ClayBlock2Clay Transmutation Recipe", true,
+				"Add or Remove ClayBlock2Clay Transmutation Recipe").getBoolean(true);
 
 		
 		
