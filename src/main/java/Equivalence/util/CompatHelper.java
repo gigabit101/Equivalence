@@ -2,6 +2,7 @@ package Equivalence.util;
 
 import Equivalence.compat.CompatIc2;
 import Equivalence.compat.CompatThaumcraft;
+import Equivalence.config.ConfigEquivalence;
 import cpw.mods.fml.common.Loader;
 
 /**
@@ -10,6 +11,8 @@ import cpw.mods.fml.common.Loader;
 
 public class CompatHelper 
 {
+	public static ConfigEquivalence properties;
+
 	public static void init()
 	{
 		if (Loader.isModLoaded("IC2"))
@@ -19,7 +22,7 @@ public class CompatHelper
 		
 		if (Loader.isModLoaded("Thaumcraft"))
 		{
-			CompatThaumcraft.init();
+			CompatThaumcraft.init(properties);
 		}
 	}
 

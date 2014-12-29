@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.0.0"
+version = "1.1.0"
 group= "com.gigabit101.equivalence" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Equivalence"
 
@@ -37,11 +37,13 @@ dependencies {
     }
 	println("  Downloading dependencies!")
     grabDep('EquivalentExchange3', 'http://ee3.pahimar.com/1.7.10/EquivalentExchange3-1.7.10-0.2.372.jar')
+    grabDep('Thaumcraft', 'https://dl.dropboxusercontent.com/u/47135879/Thaumcraft-1.7.10-4.2.0.1.jar')
     
 
 
 	println("  Adding dependencies!")
 	 compile files("dep/EquivalentExchange3.jar")
+	 compile files("dep/Thaumcraft.jar")
 	println("  Finished adding dependencies!")
 }
 
@@ -52,7 +54,8 @@ minecraft {
 
 dependencies {
 	compile files (
-		'EquivalentExchange3.jar'
+		'EquivalentExchange3.jar',
+		'Thaumcraft.jar'
 	)
 }
 

@@ -9,6 +9,8 @@ public class ConfigEquivalence
 	private static ConfigEquivalence instance = null;
 	
 	public static String CATEGORY_RECIPES = "Recipes";
+	public static String CATEGORY_RECIPES_THAUMCRAFT = "RecipesThaumcraft";
+
 	
 	//Vanilla
 	public static boolean Iron2Gold;
@@ -24,9 +26,11 @@ public class ConfigEquivalence
 	public static boolean ClayBlock2Clay;
 	public static boolean Ironblock2GoldBlock;
 	public static boolean GoldBlock2DiamandBlock;
+	
+	//Thaumcraft
+	public static boolean Shards2Shards;
 
-
-
+	
 	public static Configuration config;
 
 	private ConfigEquivalence(File configFile) {
@@ -97,6 +101,9 @@ public class ConfigEquivalence
 		Ironblock2GoldBlock = config.get(CATEGORY_RECIPES,
 				"Add Ironblock2GoldBlock Transmutation Recipe", true,
 				"Add or Remove Ironblock2GoldBlock Transmutation Recipe").getBoolean(true);
+		Shards2Shards = config.get(CATEGORY_RECIPES_THAUMCRAFT,
+				"Add Shards2Shards Transmutation Recipe", true,
+				"Add or Remove Shards2Shards Transmutation Recipe").getBoolean(true);
 
 		
 		
