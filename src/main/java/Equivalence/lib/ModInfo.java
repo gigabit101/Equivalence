@@ -11,7 +11,7 @@ public class ModInfo
 	//Mod Name
 	public static final String MOD_NAME = "Equivalence";
 	//Mod Version
-	public static final String MOD_VERSION = "1.1.0";
+	public static final String MOD_VERSION = "2.0.0";
 	// Common Proxy
 	public static final String SERVER_PROXY_CLASS = "Equivalence.CommonProxy";
 	// Client Proxy
