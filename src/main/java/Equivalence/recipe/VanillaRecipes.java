@@ -4,12 +4,10 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import Equivalence.config.ConfigEquivalence;
-
-import com.pahimar.ee3.init.ModItems;
-
-import cpw.mods.fml.common.registry.GameRegistry;
+import Equivalence.item.ModItems;
 
 /**
  * @author Gigabit101
@@ -17,9 +15,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class VanillaRecipes 
 {
-    private static ItemStack miniumStoneStack = new ItemStack(ModItems.stoneMinium, 1, OreDictionary.WILDCARD_VALUE);
+    private static ItemStack miniumStoneStack = new ItemStack(ModItems.tarnsStone, 1, OreDictionary.WILDCARD_VALUE);
 
-    private static Item miniumStone = ModItems.stoneMinium;
+    private static Item miniumStone = ModItems.tarnsStone;
     
     private static ItemStack anyWood = new ItemStack(Blocks.log, 1, OreDictionary.WILDCARD_VALUE);
 

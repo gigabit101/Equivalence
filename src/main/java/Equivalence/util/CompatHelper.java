@@ -1,9 +1,8 @@
 package Equivalence.util;
 
+import net.minecraftforge.fml.common.Loader;
 import Equivalence.compat.CompatIc2;
-import Equivalence.compat.CompatThaumcraft;
 import Equivalence.config.ConfigEquivalence;
-import cpw.mods.fml.common.Loader;
 
 /**
  * @author Gigabit101
@@ -17,12 +16,12 @@ public class CompatHelper
 	{
 		if (Loader.isModLoaded("IC2"))
 		{
-			CompatIc2.init();
+//			CompatIc2.init();
 		}
 		
 		if (Loader.isModLoaded("Thaumcraft"))
 		{
-			CompatThaumcraft.init(properties);
+//			CompatThaumcraft.init(properties);
 		}
 	}
 
