@@ -4,8 +4,8 @@ import java.io.File;
 
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -14,7 +14,6 @@ import Equivalence.config.ConfigEquivalence;
 import Equivalence.item.ModItems;
 import Equivalence.lib.ModInfo;
 import Equivalence.recipe.VanillaRecipes;
-import Equivalence.util.CompatHelper;
 
 /**
  * @author Gigabit101
@@ -51,8 +50,8 @@ public class Equivalence
 		proxy.registerRender();
 		//Loads Vanilla Transmutation Recipes
 		VanillaRecipes.init(properties);
-		//Loads Mod Compat
-		CompatHelper.init();
+//		//Loads Mod Compat
+//		CompatHelper.init();
 	}
 	
 	@Mod.EventHandler

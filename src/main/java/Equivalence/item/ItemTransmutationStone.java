@@ -1,9 +1,9 @@
 package Equivalence.item;
 
-import Equivalence.lib.ModInfo;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import Equivalence.lib.ModInfo;
 
 public class ItemTransmutationStone extends Item
 {
